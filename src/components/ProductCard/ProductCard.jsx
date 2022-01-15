@@ -15,7 +15,7 @@ const ProductCard = ({product}) => {
       <span className={styles.productPrice}>
         {`Kit of 6 - ${price}`}
       </span>
-      <Button varian="secondary">Add to cart</Button>
+      <Button variant="secondary">Add to cart</Button>
     </div>
   );
 };

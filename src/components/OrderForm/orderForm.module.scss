@@ -1,0 +1,49 @@
+.root {
+    
+    background-color: #F5EDE7;
+    padding: 30px 0 ;
+   
+}
+
+.title {
+    text-align: center;
+}
+.formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.inputWrapper {
+    margin-right: 10px;
+}
+
+.input {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 15px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 34px;
+    /* identical to box height, or 155% */
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 35px;
+    color: #000000;
+    background: transparent;
+    &:hover {
+       opacity: 0.7;
+    }
+}
+
+.visuallyHidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }

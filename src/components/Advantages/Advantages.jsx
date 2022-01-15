@@ -30,12 +30,12 @@ const Advantages = ({ children }) => {
         <div className={styles.advantagesList}>
         {ADVANTAGES_LIST.map(({title, text}, index) => (
                 <div key={index} className={styles.advantagesItem}>
-                  <Typography  varian="subtitle" className={styles.advantagesItemTitle}>{title}</Typography>
-                  <Typography  varian='main' className={styles.advantagesItemText}>{text}</Typography>
+                  <Typography  variant="subtitle" className={styles.advantagesItemTitle}>{title}</Typography>
+                  <Typography  variant='main' className={styles.advantagesItemText}>{text}</Typography>
                 </div>
             ))}
         </div>
-        <Button className={styles.advantagesButton} type='button' varian="secondary">Shop pastry kits</Button>
+        <Button className={styles.advantagesButton} type='button' variant="secondary">Shop pastry kits</Button>
       </Wrapper>
     </div>
   );
