@@ -1,0 +1,23 @@
+.root {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.navItem {
+    text-transform: uppercase;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 13px;
+    color: black;
+    opacity: 0.7;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.navItem:not(:last-of-type) {
+    margin-right: 20px;
+}

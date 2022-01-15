@@ -3,9 +3,9 @@ import styles from './style.module.scss';
 import logo from './img/logo.png';
 
 
-const Logo = () => {
+const Logo = ({className}) => {
     return (
-        <div className={styles.root}>
+        <div className={`${styles.root} ${className}`}>
             <a href="">
                 <img src={logo}/>
             </a>

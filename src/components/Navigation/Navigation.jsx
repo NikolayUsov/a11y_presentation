@@ -1,16 +1,17 @@
 import React from "react";
-import styles from "./style.module.scss";
-import Logo from "../Logo";
-import Wrapper from "../Wrapper";
+import styles from './navigation.module.scss';
 
-const Navigation = () => {
-  return (
-    <div className={styles.root}>
-      <Wrapper>
-        <Logo />
-      </Wrapper>
-    </div>
-  );
-};
+
+const NAVIGATION_ITEMS = ['Shop', 'Our Story', 'Who is Tarla?']
+
+const Navigation = ({children}) => {
+    return (
+        <div className={styles.root}>
+            {NAVIGATION_ITEMS.map((navItem, index) => (
+                <a key={index} className={styles.navItem}>{navItem}</a>
+            ))}
+        </div>
+    )
+}
 
 export default Navigation;

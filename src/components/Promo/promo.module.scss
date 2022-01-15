@@ -1,0 +1,39 @@
+.root {
+    background: #FFC3A0;
+}
+
+.inner {
+    display: flex;
+    align-items: flex-start;
+    padding: 25px 0;
+}
+
+.promoText {
+    flex-shrink: 0;
+    max-width: 444px;
+    margin-right: 50px;
+    align-self: center;
+}
+
+
+.promoTextTitle {
+    margin-bottom: 33px;
+}
+
+.promoTextMain {
+    margin-bottom: 21px;
+}
+.promoMedia {
+    flex-shrink: 1;
+}
+.promoMediaContainer {
+    border-radius: 20px;
+    background: transparent;
+    max-height: 564px;
+    max-width: 898px;
+    & img {
+        object-fit: contain;
+        height: auto;
+        width: 100%;
+    }
+}

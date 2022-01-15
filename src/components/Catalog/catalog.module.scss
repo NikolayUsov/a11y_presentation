@@ -1,0 +1,11 @@
+.root {
+    background-color: #F5EDE7;
+    padding-bottom: 30px;
+   
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 25px;
+}

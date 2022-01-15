@@ -1,0 +1,46 @@
+.root {
+    max-width: 453px;
+    min-height: 624px;
+    background-color: transparent;
+}
+
+.imageContainer {
+    height: 453px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.productName {
+    max-width: 190px;
+    margin-bottom: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 36px;
+    /* or 133% */
+
+    text-transform: uppercase;
+
+    color: #000000;
+}
+
+.productPrice {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 140% */
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+    color: #000000;
+}
