@@ -49,7 +49,7 @@ const handleChange = (evt) => {
                 className={styles.input}
                 type={type}
                 name={type}
-                placeholder={Labels[type]}
+                //placeholder={Labels[type]}
               />
             </div>
             ))
