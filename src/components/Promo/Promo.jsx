@@ -11,7 +11,7 @@ const Promo = ({ children }) => {
       <Wrapper>
         <div className={styles.inner}>
           <div className={styles.promoText}>
-            <Typography  className={styles.promoTextTitle} variant="title">Наборы свежей выпечки</Typography>
+            <Typography  className={styles.promoTextTitle} variant="title" tagName="p">Наборы свежей выпечки</Typography>
             <Typography className={styles.promoTextMain}>
             Принесите запахи и вкусы вашей любимой кондитерской в ​​ваш дом.
               В наших наборах есть все, что вам нужно, чтобы каждый раз без труда готовить потрясающую выпечку.
@@ -21,7 +21,7 @@ const Promo = ({ children }) => {
           </div>
           <div className={styles.promoMedia}>
             <div className={styles.promoMediaContainer}>
-              <img src={promo_0}/>
+              <img src={promo_0} alt="Два раскошных круасана"/>
             </div>
           </div>
         </div>

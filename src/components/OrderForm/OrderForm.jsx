@@ -20,7 +20,7 @@ const Labels = {
 
 const OrderForm = ({ children }) => {
 const [inputs, setInputValue] = useState(initFormInput);
-
+const isSubmitBtnDisabled = Object.keys(inputs).some((input) => !inputs[input].value)
 const handleChange = (evt) => {
   const {name, value} = evt.target;
   const newState = {
@@ -30,11 +30,14 @@ const handleChange = (evt) => {
   setInputValue(newState);
   console.log(evt)
 }
+const onFormSubmit =(evt) => {
+  evt.preventdefault();
+}
   return (
-    <div className={styles.root}>
+    <section className={styles.root}>
       <Wrapper>
         <Typography variant='subtitle' className={styles.title}>Оставьте заказ и мы свяжемся</Typography>
-        <form method="post" className={styles.formContainer}>
+        <form method="post" className={styles.formContainer} onSubmit={onFormSubmit}>
           {
             Object.keys(inputs).map((type) => (
               <div
@@ -45,19 +48,29 @@ const handleChange = (evt) => {
               <input
                 value={inputs[type].value}
                 onChange={handleChange}
-                // id={type}
+                id={type}
                 className={styles.input}
                 type={type}
                 name={type}
-                //placeholder={Labels[type]}
+                placeholder={Labels[type]}
               />
             </div>
             ))
           }
-        <Button variant="primary" type="submit">Отрпавить</Button>
+        <Button
+          variant="primary"
+          type="submit"
+          tab-index={0}
+          aria-disabled={isSubmitBtnDisabled ? 'true': 'false'}
+          disabled={isSubmitBtnDisabled}>
+            Отрпавить
+        </Button>
+        <p  className='visuallyHidden' aria-live="assertive">
+          {isSubmitBtnDisabled ? 'Введите Ваше Имя и телефон для отправки формы' : 'Нажмите кнопку отправить'}
+          </p>
         </form>
       </Wrapper>
-    </div>
+    </section>
   );
 };
 

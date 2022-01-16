@@ -6,7 +6,7 @@ import Navigation from "../Navigation";
 
 const Header = () => {
   return (
-    <div className={styles.root}>
+    <header className={styles.root}>
       <Wrapper>
         <div className={styles.container}>
           <Logo className={styles.logo}/>
@@ -14,7 +14,7 @@ const Header = () => {
         </div>
 
       </Wrapper>
-    </div>
+    </header>
   );
 };
 

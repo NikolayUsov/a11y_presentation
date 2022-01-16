@@ -6,7 +6,7 @@ import { products } from "./data";
 
 const Catalog = () => {
   return (
-    <div className={styles.root}>
+    <section className={styles.root}>
       <Wrapper>
         <div className={styles.container}>
           {products.map((product) => (
@@ -14,7 +14,7 @@ const Catalog = () => {
           ))}
         </div>
       </Wrapper>
-    </div>
+    </section>
   );
 };
 

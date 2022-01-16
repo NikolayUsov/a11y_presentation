@@ -8,10 +8,15 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Promo />
-      <Advantages />
-      <Catalog />
-      <OrderForm />
+      <div role="main" aria-labelledby="title1">
+
+          <h1 id="title1" className='visuallyHidden'>Основная страница магазина</h1>
+        <Promo />
+        <Advantages />
+        <Catalog />
+        <OrderForm />
+      </div>
+
     </div>
 
   );

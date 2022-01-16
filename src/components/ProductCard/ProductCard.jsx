@@ -7,15 +7,15 @@ import Button from "../../ui-kit/Button";
 const ProductCard = ({product}) => {
   const {name, price, imageNumber} = product;
   return (
-    <div className={styles.root}>
+    <div className={styles.root} tabIndex={0}>
       <div className={styles.imageContainer}>
-        <img src={`./products/img/product-${imageNumber}.png`}/>
+        <img src={`./products/img/product-${imageNumber}.png`} alt="Изображение нашей продукции"/>
       </div>
-      <Typography className={styles.productName}>{name}</Typography>
+      <Typography tagName='h3' className={styles.productName}>{name}</Typography>
       <span className={styles.productPrice}>
-        {`Цена - ${price}`}
+        {`Цена - ${price} рублей`}
       </span>
-      <Button className={styles.addTocart}variant="secondary">Add to cart</Button>
+      <Button className={styles.addTocart}variant="secondary">Добавит в корзину</Button>
     </div>
   );
 };

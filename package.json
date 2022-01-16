@@ -6,12 +6,13 @@
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "airbnb": "0.0.2",
+    "eslint-config-airbnb": "^19.0.4",
+    "node-sass": "^6.0.1",
+    "normalize-scss": "^7.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
-    "node-sass": "^6.0.1",
-    "normalize-scss": "^7.0.1",
-    "airbnb": "0.0.2",
     "web-vitals": "^2.1.3"
   },
   "scripts": {
@@ -23,7 +24,8 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "jsx-a11y"
     ]
   },
   "browserslist": {
@@ -37,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1"
   }
 }
