@@ -1,4 +1,5 @@
 import React from "react";
+import Accordion from "../../ui-kit/Accordion";
 import Button from "../../ui-kit/Button";
 import Typography from "../../ui-kit/Typography";
 import Wrapper from "../Wrapper";
@@ -6,36 +7,39 @@ import styles from "./advantages.module.scss";
 
 const ADVANTAGES_LIST = [
   {
-    title: 'Choose your fave',
-    text:  'This sounds easier than it s going to be. We\'ve got all the classics on here, so now it\'s over to you.'
+    title: 'Выберите свой любимый',
+    text:  'Это звучит проще, чем кажется. У нас здесь есть вся классика, так что теперь дело за вами.'
   },
   {
-    title: 'Ding dong',
-    text: 'Next you\'ll get a beautiful little package delivered to your door, on a day and time slot that you choose.'
+    title: 'Дзынь-дзынь',
+    text: 'Затем вы получите красивую маленькую посылку, доставленную к вашей двери, в день и время, которые вы выберете.'
   },
   {
-    title: 'Get baked',
-    text: 'Take your fresh pastry sheet and fillings, learn our pro techniques then never buy a stale pastry ever again.'
+    title: 'Получить испеченный',
+    text: 'Возьмите лист свежего теста и начинку, изучите наши профессиональные приемы и никогда больше не покупайте черствую выпечку.'
   },
   {
-    title: 'Take the credit',
-    text:  'It was all you, nudge-nudge wink-wink. We\'re just happy to be your loyal side-kick.'
+    title: 'Получи доверие',
+    text: 'Это все ты, подмигнул-подмигнул. Мы просто счастливы быть вашим верным помощником.'
   },
 ];
 const Advantages = ({ children }) => {
   return (
     <div className={styles.root}>
       <Wrapper>
-        <p className={styles.title}>How it works</p>
+        <p className={styles.title}>Как мы работаем</p>
         <div className={styles.advantagesList}>
-        {ADVANTAGES_LIST.map(({title, text}, index) => (
-                <div key={index} className={styles.advantagesItem}>
-                  <Typography  variant="subtitle" className={styles.advantagesItemTitle}>{title}</Typography>
-                  <Typography  variant='main' className={styles.advantagesItemText}>{text}</Typography>
-                </div>
-            ))}
+        {ADVANTAGES_LIST.map(({title, text}, index) => {
+          const accordionTitle = <Typography  variant="subtitle" className={styles.advantagesItemTitle}>{title}</Typography>
+          const accordionDetails =  <Typography  variant='main' className={styles.advantagesItemText}>{text}</Typography>
+          return (
+
+              <Accordion  key={index} title={accordionTitle} details={accordionDetails} className={styles.advantagesItem}/>
+
+        )
+        })}
         </div>
-        <Button className={styles.advantagesButton} type='button' variant="secondary">Shop pastry kits</Button>
+        <Button className={styles.advantagesButton} type='button' variant="secondary">кондитерские наборы</Button>
       </Wrapper>
     </div>
   );

@@ -13,9 +13,9 @@ const ProductCard = ({product}) => {
       </div>
       <Typography className={styles.productName}>{name}</Typography>
       <span className={styles.productPrice}>
-        {`Kit of 6 - ${price}`}
+        {`Цена - ${price}`}
       </span>
-      <Button variant="secondary">Add to cart</Button>
+      <Button className={styles.addTocart}variant="secondary">Add to cart</Button>
     </div>
   );
 };

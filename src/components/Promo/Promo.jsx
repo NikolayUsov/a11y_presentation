@@ -11,13 +11,13 @@ const Promo = ({ children }) => {
       <Wrapper>
         <div className={styles.inner}>
           <div className={styles.promoText}>
-            <Typography  className={styles.promoTextTitle} variant="title">Fresh pastry kits</Typography>
+            <Typography  className={styles.promoTextTitle} variant="title">Наборы свежей выпечки</Typography>
             <Typography className={styles.promoTextMain}>
-              Bringing the smells and tastes of your favourite patisserie to your home. 
-              Our kits have everything you need to easily make killer pastries every time. 
-              We haveve done the tricky bits so all you need to do is roll, proof and bake!
+            Принесите запахи и вкусы вашей любимой кондитерской в ​​ваш дом.
+              В наших наборах есть все, что вам нужно, чтобы каждый раз без труда готовить потрясающую выпечку.
+              Мы сделали самые сложные детали, так что все, что вам нужно сделать, это раскатать, раскатать и испечь!
             </Typography>
-            <Button variant="primary" type='button'>Shop pastry kits</Button>
+            <Button variant="primary" type='button'>кондитерские наборы</Button>
           </div>
           <div className={styles.promoMedia}>
             <div className={styles.promoMediaContainer}>

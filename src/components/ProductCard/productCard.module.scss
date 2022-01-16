@@ -2,6 +2,9 @@
     max-width: 453px;
     min-height: 624px;
     background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .imageContainer {
@@ -43,4 +46,8 @@
     text-transform: uppercase;
 
     color: #000000;
+}
+
+.addTocart {
+    margin-top: auto;
 }

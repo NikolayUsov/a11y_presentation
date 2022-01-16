@@ -2,7 +2,7 @@ import React from "react";
 import styles from './navigation.module.scss';
 
 
-const NAVIGATION_ITEMS = ['Shop', 'Our Story', 'Who is Tarla?']
+const NAVIGATION_ITEMS = ['Магазин', 'Наша истоия', 'Кто мы?']
 
 const Navigation = ({children}) => {
     return (
