@@ -44,7 +44,7 @@ const onFormSubmit =(evt) => {
               className={styles.inputWrapper}
               key={type}
             >
-              <label htmlFor={type} className={styles.visuallyHidden}>{Labels[type]}</label>
+              <label htmlFor={type} aria-hidden="true" className={styles.visuallyHidden}>{Labels[type]}</label>
               <input
                 value={inputs[type].value}
                 onChange={handleChange}
@@ -53,6 +53,7 @@ const onFormSubmit =(evt) => {
                 type={type}
                 name={type}
                 placeholder={Labels[type]}
+                aria-required="true"
               />
             </div>
             ))

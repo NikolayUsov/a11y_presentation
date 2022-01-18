@@ -34,7 +34,7 @@ const Advantages = ({ children }) => {
           const accordionDetails =  <Typography  variant='main' className={styles.advantagesItemText}>{text}</Typography>
           return (
 
-              <Accordion  key={index} title={accordionTitle} details={accordionDetails} className={styles.advantagesItem}/>
+              <Accordion  id={index} key={index} title={accordionTitle} details={accordionDetails} className={styles.advantagesItem}/>
 
         )
         })}

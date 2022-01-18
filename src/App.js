@@ -11,7 +11,7 @@ function App() {
       <Header />
       <div role="main" aria-labelledby="title1" id='main'>
 
-          <h1 id="title1" className='visuallyHidden'>Основная страница магазина</h1>
+          <h1 id="title1" className='visuallyHidden'> Главная страница магазина</h1>
         <Promo />
         <Advantages />
         <Catalog />

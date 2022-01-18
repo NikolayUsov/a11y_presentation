@@ -8,6 +8,7 @@ const Accordion = ({
   className = "",
   title,
   details,
+  id,
   ...props
 }) => {
   const [isOpen, setOpen] = useState(false);
@@ -19,7 +20,7 @@ const Accordion = ({
   return (
     <div className={className}>
       <button
-        id="btn1"
+        id={`btn${id}`}
         onClick={toggleOpen}
         className={styles.button}
         aria-controls="control1"
@@ -27,7 +28,7 @@ const Accordion = ({
       >
         {title}
       </button>
-      {isOpen && <div id="control1" role='region' aria-labelledby="btn1">{details}</div>}
+      {isOpen && <div id="control1" role='region' aria-labelledby={`btn${id}`}>{details}</div>}
     </div>
   );
 };

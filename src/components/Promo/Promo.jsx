@@ -7,7 +7,8 @@ import Button from "../../ui-kit/Button";
 
 const Promo = ({ children }) => {
   return (
-    <div className={styles.root}>
+    <div className={styles.root} aria-lab aria-labelledby='promo'>
+      <h2 className="visuallyHidden" id="promo">Промо раздел нашего сайта</h2>
       <Wrapper>
         <div className={styles.inner}>
           <div className={styles.promoText}>
@@ -15,7 +16,6 @@ const Promo = ({ children }) => {
             <Typography className={styles.promoTextMain}>
             Принесите запахи и вкусы вашей любимой кондитерской в ​​ваш дом.
               В наших наборах есть все, что вам нужно, чтобы каждый раз без труда готовить потрясающую выпечку.
-              Мы сделали самые сложные детали, так что все, что вам нужно сделать, это раскатать, раскатать и испечь!
             </Typography>
             <Button variant="primary" type='button'>кондитерские наборы</Button>
           </div>
