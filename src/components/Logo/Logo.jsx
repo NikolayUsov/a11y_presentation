@@ -6,8 +6,8 @@ import logo from './img/logo.png';
 const Logo = ({className}) => {
     return (
         <div className={`${styles.root} ${className}`}>
-            <a href="">
-                <img src={logo}/>
+            <a href="/" > 
+                <img src={logo} alt="Логотип компании Tarla"/>
             </a>
         </div>
     )

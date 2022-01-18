@@ -2,15 +2,26 @@ import React from "react";
 import styles from './navigation.module.scss';
 
 
-const NAVIGATION_ITEMS = ['Магазин', 'Наша истоия', 'Кто мы?']
+const NAVIGATION_ITEMS = ['shop', 'history', 'about']
+
+const NAVIGATION_LABELS= {
+    shop: 'Магазин',
+    history: 'Наша истоия',
+    about: 'Кто мы',
+}
 
 const Navigation = ({children}) => {
     return (
-        <div className={styles.root}>
+        <nav className={styles.root}>
+            <ul className={styles.navLit}>
             {NAVIGATION_ITEMS.map((navItem, index) => (
-                <a key={index} className={styles.navItem}>{navItem}</a>
+                <li key={index} className={styles.navItem}>
+                    <a   href={`/${navItem}`}>{NAVIGATION_LABELS[navItem]}</a>
+                </li>
+                
             ))}
-        </div>
+            </ul>
+        </nav>
     )
 }
 

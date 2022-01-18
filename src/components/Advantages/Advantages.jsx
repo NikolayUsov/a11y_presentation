@@ -7,7 +7,7 @@ import styles from "./advantages.module.scss";
 
 const ADVANTAGES_LIST = [
   {
-    title: 'Выберите свой любимый',
+    title: 'Выберите любимый',
     text:  'Это звучит проще, чем кажется. У нас здесь есть вся классика, так что теперь дело за вами.'
   },
   {
@@ -25,23 +25,23 @@ const ADVANTAGES_LIST = [
 ];
 const Advantages = ({ children }) => {
   return (
-    <div className={styles.root}>
+    <section className={styles.root}>
       <Wrapper>
-        <p className={styles.title}>Как мы работаем</p>
+        <h2 className={styles.title}>Как мы работаем</h2>
         <div className={styles.advantagesList}>
         {ADVANTAGES_LIST.map(({title, text}, index) => {
-          const accordionTitle = <Typography  variant="subtitle" className={styles.advantagesItemTitle}>{title}</Typography>
+          const accordionTitle = <Typography  tagName='p' variant="subtitle" className={styles.advantagesItemTitle}>{title}</Typography>
           const accordionDetails =  <Typography  variant='main' className={styles.advantagesItemText}>{text}</Typography>
           return (
 
-              <Accordion  key={index} title={accordionTitle} details={accordionDetails} className={styles.advantagesItem}/>
+              <Accordion  id={index} key={index} title={accordionTitle} details={accordionDetails} className={styles.advantagesItem}/>
 
         )
         })}
         </div>
         <Button className={styles.advantagesButton} type='button' variant="secondary">кондитерские наборы</Button>
       </Wrapper>
-    </div>
+    </section>
   );
 };
 

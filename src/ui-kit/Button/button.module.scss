@@ -15,6 +15,14 @@
     border-radius: 35px;
     color: #000000;
     background: transparent;
+    &:disabled {
+        opacity: .1;
+
+    }
+    &:disabled:hover {
+        opacity: .2;
+
+    }
     &:hover {
        opacity: 0.7;
     }
